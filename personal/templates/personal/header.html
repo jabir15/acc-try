@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Jabir Hussain</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="{% static 'personal/js/bootstrap.min.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.css' %}" type="text/css" />
+
+	<style type="text/css">
+		html,
+		body {
+			height: 100%;
+		}
+	</style>
+
+</head>
+
+<body class="body" style="background-color:#eeeeee;">
+	<!-- <div class="container-fluid", style="text-align: center; display: block;">
+		JABIR HUSSAIN
+
+	</div> -->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'personal/img/bootstrap-solid.svg' %}" width="30" height="30" alt="">
+		  </a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="/">Home
+					<span class="sr-only">(current)</span>
+				</a>
+				<a class="nav-item nav-link" href="#">Blog</a>
+				<a class="nav-item nav-link" href="/contact">Contact</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid" style="min-height:95%;">
+		<br>
+		<br> {% block content %} {% endblock %}
+		<br>
+	</div>
+
+	<footer>
+		<div class="container-fluid" style="background-color: #ffffff; padding-top: 10px;">
+			<p style="text-align: center">
+				<a href="#" target="blank">LinkedIn</a> |
+				<a href="#" target="blank">Twitter</a> |
+				<a href="#" target="blank">Google+</a>
+			</p>
+		</div>
+	</footer>
+
+</body>
+
+</html>

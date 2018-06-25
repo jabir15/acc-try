@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Jabir Hussain</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'materialize/css/materialize.css' %}" type="text/css" />
+	<script src="{% static 'materialize/js/materialize.min.js' %}"></script>
+
+	<style type="text/css">
+		html,
+		body {
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#eeeeee;">
+	<!-- <div class="container-fluid", style="text-align: center; display: block;">
+		JABIR HUSSAIN
+
+	</div> -->
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#!" class="brand-logo">Logo</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger">
+				<i class="material-icons">menu</i>
+			</a>
+			<ul class="right hide-on-med-and-down">
+				<li>
+					<a href="sass.html">Sass</a>
+				</li>
+				<li>
+					<a href="badges.html">Components</a>
+				</li>
+				<li>
+					<a href="collapsible.html">Javascript</a>
+				</li>
+				<li>
+					<a href="mobile.html">Mobile</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li>
+			<a href="sass.html">Sass</a>
+		</li>
+		<li>
+			<a href="badges.html">Components</a>
+		</li>
+		<li>
+			<a href="collapsible.html">Javascript</a>
+		</li>
+		<li>
+			<a href="mobile.html">Mobile</a>
+		</li>
+	</ul>
+
+	<div class="container-fluid" style="min-height:95%;">
+		<br>
+		<br> {% block content %} {% endblock %}
+		<br>
+	</div>
+
+	<footer>
+		<div class="container-fluid" style="background-color: #ffffff; padding-top: 10px;">
+			<p style="text-align: center">
+				<a href="#" target="blank">LinkedIn</a> |
+				<a href="#" target="blank">Twitter</a> |
+				<a href="#" target="blank">Google+</a>
+			</p>
+		</div>
+	</footer>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var elems = document.querySelectorAll('.sidenav');
+			var instances = M.Sidenav.init(elems);
+		});	
+	</script>
+
+</body>
+
+</html>
