@@ -30,9 +30,6 @@ class Event(models.Model):
     #This is required so that you can see
     def __str__(self):
         return self.event_type
-
-    def get_only_workshop(self):
-        return self.objects.all().filter(type='WS').order_by("-enddate")
     
     
     
