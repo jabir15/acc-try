@@ -4,7 +4,7 @@
     {% for event in event_list %}
         <a href="/workshops/{{ event.id }}" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{ event.now }}</h5>
+                <h5 class="mb-1">{{ event.title }}</h5>
                 <small>Updated: {{ event.created_at|naturaltime }}</small>
             </div>
             <p class="mb-1 text-info">{{ event.event_details }}</p>
