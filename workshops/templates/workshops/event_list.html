@@ -1,7 +1,26 @@
-{% extends "personal/header.html" %} {% block content %}
-{% load humanize %}
-<div class="list-group">
-    {% for event in event_list %}
+{% extends "personal/header.html" %} {% block content %} {% load humanize %}
+{{ now }}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="btn-toolbar btn-group-toggle float-right mb-1" role="toolbar" aria-label="Basic example" data-toggle="buttons">
+                <label class="btn btn-outline-primary m-1 active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked>All Events</button>
+                </label>
+                <label class="btn btn-outline-primary m-1">
+                    <input type="radio" name="options" id="option2" autocomplete="off">Workshops</button>
+                </label>
+                <label class="btn btn-outline-primary m-1">
+                    <input type="radio" name="options" id="option3" autocomplete="off">Seminars</button>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="list-group">
+        {% for event in event_list %}
         <a href="/workshops/{{ event.id }}" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">{{ event.title }}</h5>
@@ -12,6 +31,7 @@
             <p class="mb-1 text-danger">Date: {{ event.startdate|date:"dS F, Y" }} - {{ event.enddate|date:"dS F, Y" }}</p>
             <small>Venue: {{ event.organiser_college }}, {{ event.organiser_district}} {{ event.organiser_state }}: {{ event.organiser_pincode}}</small>
         </a>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock%}

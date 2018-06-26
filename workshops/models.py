@@ -9,7 +9,8 @@ class Event(models.Model):
         ('SR', 'Seminar'),
         ('WS', 'Workshop'),
     )
-    type = models.CharField(
+
+    event_type = models.CharField(
         max_length=2,
         choices = TYPE_EVENT,
         default = 'SR',
@@ -28,5 +29,10 @@ class Event(models.Model):
 
     #This is required so that you can see
     def __str__(self):
-        return self.title
+        return self.event_type
+
+    def get_only_workshop(self):
+        return self.objects.all().filter(type='WS').order_by("-enddate")
+    
+    
     
