@@ -1,22 +1,24 @@
-from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
-from django.views.decorators.csrf import csrf_exempt
 
 from workshops.models import Event
 
 # Create your views here.
+
+
 class EventListView(ListView):
 
     model = Event
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        option = self.request.GET.get('option','AE')
+        option = self.request.GET.get('option', 'AE')
         if option == 'WS':
-            context['event_list'] = Event.objects.filter(event_type=option).order_by('-created_at')
+            context['event_list'] = Event.objects.filter(
+                event_type=option).order_by('-created_at')
             return context
         elif option == 'SR':
-            context['event_list'] = Event.objects.filter(event_type=option).order_by('-created_at')
+            context['event_list'] = Event.objects.filter(
+                event_type=option).order_by('-created_at')
             return context
         else:
             context['event_list'] = Event.objects.all().order_by('-created_at')
