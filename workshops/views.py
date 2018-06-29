@@ -1,8 +1,6 @@
-from django.utils import timezone
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
-from django.views.decorators.csrf import csrf_protect
-from django.http import JsonResponse
-from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 from workshops.models import Event
 
@@ -10,32 +8,16 @@ from workshops.models import Event
 class EventListView(ListView):
 
     model = Event
-    paginate_by = 10
-
-@csrf_protect
-def post(request):
-    events = Event.objects.all().order_by("-enddate")[:10]
-    return render(request, 'workshops/event_list.html', { 'event_list': events })
-
-def ajax(self, request):
-    response_dict = {
-        'success': True
-    }
-    action = request.POST.get('action', '')
-    if action=='select_event':
-        option = request.POST.get('option','')
-    if hasattr(self, action):
-        response_dict = getattr(self, action)(request)
-        if option == "Workshops":
-            response_dict = {
-                'events': Event.objects.all().filter(event_type='WS').order_by("-enddate")
-            }
-        elif option == "Seminars":
-            response_dict = {
-                'events': Event.objects.all().filter(event_type='SR').order_by("-enddate")
-            }
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        option = self.request.GET.get('option','AE')
+        if option == 'WS':
+            context['event_list'] = Event.objects.filter(event_type=option).order_by('-created_at')
+            return context
+        elif option == 'SR':
+            context['event_list'] = Event.objects.filter(event_type=option).order_by('-created_at')
+            return context
         else:
-            response_dict = {
-                'events': Event.objects.all().order_by("-enddate")[:10]
-            }
-    return JsonResponse(response_dict)
+            context['event_list'] = Event.objects.all().order_by('-created_at')
+            return context

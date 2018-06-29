@@ -29,7 +29,7 @@ class Event(models.Model):
 
     #This is required so that you can see
     def __str__(self):
-        return self.event_type
+        return self.title
     
     
     

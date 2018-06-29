@@ -3,16 +3,16 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
-            <form action="select_event" method="get">{% csrf_token %}
+            <form action="" method="get">{% csrf_token %}
                 <div class="btn-toolbar btn-group-toggle float-right mb-1" role="toolbar" aria-label="Basic example" data-toggle="buttons">
                     <label class="btn btn-outline-primary m-1 active">
-                        <input type="radio" class="myRadioClass" name="options" id="option1" value="All Events" autocomplete="off" checked>All Events
+                        <input type="radio" class="myRadioClass" name="options" id="option1" value="AE" autocomplete="off" checked>All Events
                     </label>
                     <label class="btn btn-outline-primary m-1">
-                        <input type="radio" class="myRadioClass" name="options" id="option2" value="Workshops" autocomplete="off">Workshops
+                        <input type="radio" class="myRadioClass" name="options" id="option2" value="WS" autocomplete="off">Workshops
                     </label>
                     <label class="btn btn-outline-primary m-1">
-                        <input type="radio" class="myRadioClass" name="options" id="option3" value="Seminars" autocomplete="off">Seminars
+                        <input type="radio" class="myRadioClass" name="options" id="option3" value="SR" autocomplete="off">Seminars
                     </label>
                 </div>
             </form>
@@ -21,22 +21,22 @@
 </div>
 <script>
     $("input:radio").change(function () {
-        $option = $(this).val();
-        console.log($option);
+        option = $(this).val();
         $.ajax({
-            url: '/hello/',
             data: {
-                'action': "select_event",
-                'option' : $option
+                'option' : option
             },
-            dataType: 'json',
-            success: function(data){
-                console.log(data.events);
+            method: 'get',
+            success: function(data,status){
+                console.log(status);
+                console.log(data);
+                $("div.list-group").hide().html(
+                    jQuery(data).find("div.list-group").html()
+                ).fadeIn("slow");
             }
         });
     });
 </script>
-
 <div class="container-fluid">
     <div class="list-group">
         {% for event in event_list %}
