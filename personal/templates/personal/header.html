@@ -59,7 +59,7 @@
 	</footer>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			if ($.cookie('agree') == null ) {
+			if ($.cookie('agreeDisclaimer') == null ) {
 				$("#mainboxes").css('filter', 'blur(5px)');
 				$("#exampleModalLive").modal({
 					show: true,
@@ -68,7 +68,7 @@
 				});
 			}
 		});
-		$('#agree').on('click',function(){
+		$('#agreeDisclaimer').on('click',function(){
 			var date = new Date();
 			date.setTime(date.getTime() + 20*1000);
 			$.cookie('agree','yes', {expires: date});
