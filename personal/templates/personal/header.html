@@ -9,6 +9,7 @@
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="{% static 'personal/js/bootstrap.bundle.min.js' %}"></script>
 	<script src="{% static 'personal/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'personal/js/jquery.cookie.js' %}"></script>
 
 	<style type="text/css">
 		html,
@@ -62,11 +63,16 @@
 	</footer>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$("#exampleModalLive").modal({
-				show: true,
-				keyboard: false,
-            	backdrop: 'static'
-			});
+			if ($.cookie('agree') == null ) {
+				$("#exampleModalLive").modal({
+					show: true,
+					keyboard: false,
+					backdrop: 'static'
+				});
+			}
+		});
+		$('#agree').on('click',function(){
+			$.cookie('agree','yes', {expires: 7});
 		});
 	</script>
 
