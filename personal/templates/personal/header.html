@@ -25,10 +25,6 @@
 </head>
 
 <body class="body" style="background-color:#eeeeee;">
-	<!-- <div class="container-fluid", style="text-align: center; display: block;">
-		JABIR HUSSAIN
-
-	</div> -->
 	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="/">
 			<img src="{% static 'personal/img/bootstrap-solid.svg' %}" width="30" height="30" alt="">
@@ -64,6 +60,7 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 			if ($.cookie('agree') == null ) {
+				$("#mainboxes").css('filter', 'blur(5px)');
 				$("#exampleModalLive").modal({
 					show: true,
 					keyboard: false,
@@ -72,7 +69,10 @@
 			}
 		});
 		$('#agree').on('click',function(){
-			$.cookie('agree','yes', {expires: 7});
+			var date = new Date();
+			date.setTime(date.getTime() + 20*1000);
+			$.cookie('agree','yes', {expires: date});
+			$("#mainboxes").css('filter', 'blur(0px)');
 		});
 	</script>
 
