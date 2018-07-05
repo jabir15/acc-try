@@ -4,15 +4,12 @@ from django.shortcuts import render
 
 
 def index(request):
-
-    if 'agree' in request.COOKIES:
-        print('SET')
-    else:
-        print('NOT SET')
-    
     response = render(request, 'personal/home.html')
-
     return response
+
+
+def about(request):
+    return render(request, 'personal/about.html')
 
 
 def contact(request):

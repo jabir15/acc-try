@@ -1,4 +1,5 @@
 {% extends "personal/header.html" %} {% block content %} {% load humanize %}
+{% include 'personal/includes/disclaimer.html' %}
 
 <div class="container-fluid">
     <div class="row">
@@ -37,7 +38,7 @@
         });
     });
 </script>
-<div class="container-fluid">
+<div class="container-fluid"  id="maincontent">
     <div class="list-group">
         {% for event in event_list %}
         <a href="/workshops/{{ event.id }}" class="list-group-item list-group-item-action flex-column align-items-start">

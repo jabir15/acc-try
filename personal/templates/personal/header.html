@@ -34,13 +34,33 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="/">Home
-					<span class="sr-only">(current)</span>
-				</a>
-				<a class="nav-item nav-link" href="/">Blog</a>
-				<a class="nav-item nav-link" href="/contact">Contact</a>
-			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/events">Events</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Updates
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">DHE</a>
+						<a class="dropdown-item" href="#">UGC</a>
+						<a class="dropdown-item" href="#">Others</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about">About Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/contact">Contact</a>
+				</li>
+
+			</ul>
 		</div>
 	</nav>
 	<div class="container-fluid" style="min-height:95%;">
@@ -59,8 +79,8 @@
 	</footer>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			if ($.cookie('agreeDisclaimer') == null ) {
-				$("#mainboxes").css('filter', 'blur(5px)');
+			if ($.cookie('agreeDisclaimer') == null) {
+				$("#maincontent").css('filter', 'blur(5px)');
 				$("#exampleModalLive").modal({
 					show: true,
 					keyboard: false,
@@ -68,11 +88,11 @@
 				});
 			}
 		});
-		$('#agreeDisclaimer').on('click',function(){
+		$('#agreeDisclaimer').on('click', function () {
 			var date = new Date();
-			date.setTime(date.getTime() + 20*1000);
-			$.cookie('agree','yes', {expires: date});
-			$("#mainboxes").css('filter', 'blur(0px)');
+			date.setTime(date.getTime() + 60 * 1000);
+			$.cookie('agreeDisclaimer', 'yes', { expires: date, path: '/' });
+			$("#maincontent").css('filter', 'blur(0px)');
 		});
 	</script>
 
