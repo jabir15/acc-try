@@ -29,8 +29,6 @@
             },
             method: 'get',
             success: function(data,status){
-                console.log(status);
-                console.log(data);
                 $("div.list-group").hide().html(
                     jQuery(data).find("div.list-group").html()
                 ).fadeIn("slow");
