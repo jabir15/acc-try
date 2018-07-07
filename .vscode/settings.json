@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
-        "htmlsnippet"
+        "favicon",
+        "htmlsnippet",
+        "pbas"
     ],
     "python.formatting.provider": "autopep8",
     "python.linting.pylintEnabled": false,
