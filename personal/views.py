@@ -13,4 +13,4 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'personal/basic.html', {'content': ['If you would like to contact me, please email me', 'jabir.hussain.aec@gmail.com']})
+    return render(request, 'personal/basic.html', {'content': ['If you would like to contact me, please email me at', 'jabir.hussain.aec@gmail.com']})
