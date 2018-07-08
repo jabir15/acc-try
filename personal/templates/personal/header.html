@@ -86,7 +86,7 @@
 		});
 		$('#agreeDisclaimer').on('click', function () {
 			var date = new Date();
-			date.setTime(date.getTime() + 60 * 1000);
+			date.setTime(date.getTime() +  5 * 60 * 1000);
 			$.cookie('agreeDisclaimer', 'yes', { expires: date, path: '/' });
 			$("#maincontent").css('filter', 'blur(0px)');
 		});
