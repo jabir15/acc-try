@@ -124,4 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/jabirhussain/acc-try/static/'
+STATIC_ROOT = '/home/assamcollegecode/acc-try/static/'
