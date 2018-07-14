@@ -30,7 +30,7 @@ def contact(request):
             # message = request.POST.get('content','')
             contact_name = form.cleaned_data['contact_name']
             subject = form.cleaned_data['content_subject']
-            message = form.cleaned_data['content']
+            message = """Message from """ + contact_name + """. """ + form.cleaned_data['content']
             sender = form.cleaned_data['contact_email']
             cc_myself = form.cleaned_data['cc_myself']
 
