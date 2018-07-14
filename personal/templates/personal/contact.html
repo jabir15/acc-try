@@ -1,0 +1,70 @@
+{% extends "personal/header.html" %} {% block content %}
+
+<div class="container-fluid w-75">
+    <div class="contactcard">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card-body form-group">
+                    <h3 class="card-title mb-4">
+                        <i class="fas fa-envelope pr-2"></i>Write to us:</h3>
+                    <form role="form" action="" method="POST">
+                        {% csrf_token %} {{ form.as_p }}
+                        <button class="btn btn-dark" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 d-inline-flex align-items-center bg-dark">
+                <div class="card-body text-white text-center">
+                    <h3 class="card-title mb-4">Contact Information</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <i class="fas fa-map-marker-alt pr-2"></i>Silchar, 788006, India</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-phone pr-2"></i>+ 91 801-181-7346</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-envelope pr-2"></i>kabirhussain57@gmail.com</p>
+                        </li>
+                    </ul>
+                    <hr class="dropdown-divider">
+                    <ul class="list-inline text-center list-unstyled">
+                        <li class="list-inline-item">
+                            <a class="p-2" href="https://www.twitter.com/">
+                                <span style="font-size: 2em; color:white;">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-2" href="https://www.google.com/">
+                                <span style="font-size: 2em; color:white;">
+                                    <i class="fab fa-google-plus-square"> </i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-2" href="https://www.instagram.com/">
+                                <span style="font-size: 2em; color:white;">
+                                    <i class="fab fa-instagram"> </i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-2" href="https://www.facebook.com/">
+                                <span style="font-size: 2em; color:white;">
+                                    <i class="fab fa-facebook"> </i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
