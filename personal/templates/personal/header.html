@@ -6,7 +6,9 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
 	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.css' %}" type="text/css" />
-	<link rel="icon" href="{% static 'personal/img/favicon.ico' %}" type="image/x-icon"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	 crossorigin="anonymous">
+	<link rel="icon" href="{% static 'personal/img/favicon.ico' %}" type="image/x-icon" />
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="{% static 'personal/js/bootstrap.js' %}"></script>
 	<script src="{% static 'personal/js/jquery.cookie.js' %}"></script>
@@ -60,11 +62,11 @@
 		</div>
 	</nav>
 	<div class="container-fluid" style="min-height:95%;">
-		<br>{% block content %}  {% endblock %}
+		<br>{% block content %} {% endblock %}
 		<br>
 	</div>
 
-	<footer>
+	<!-- <footer>
 		<div class="container-fluid" style="background-color: #ffffff; padding-top: 10px;">
 			<p style="text-align: center">
 				<a href="#" target="blank">LinkedIn</a> |
@@ -72,7 +74,7 @@
 				<a href="#" target="blank">Google+</a>
 			</p>
 		</div>
-	</footer>
+	</footer> -->
 	<script type="text/javascript">
 		$(document).ready(function () {
 			if ($.cookie('agreeDisclaimer') == null) {
