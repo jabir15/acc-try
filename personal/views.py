@@ -34,7 +34,7 @@ def contact(request):
             sender = form.cleaned_data['contact_email']
             cc_myself = form.cleaned_data['cc_myself']
 
-            recipients = ['jabir.hussain.aec@gmail.com']
+            recipients = ['assamcollegecode.pythonanywhere@gmail.com']
             if cc_myself:
                 recipients.append(sender)
             try:
