@@ -37,8 +37,7 @@ def contact(request):
             recipients = ['assamcollegecode.pythonanywhere@gmail.com']
             if cc_myself:
                 recipients.append(sender)
-            
-            email = EmailMessage(subject,message,sender,recipients,reply_to=[sender])
+            email = EmailMessage(subject, message, sender,recipients,reply_to=[sender,])
             try:
                 email.send()
             except BadHeaderError:
