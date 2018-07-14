@@ -30,8 +30,8 @@ def contact(request):
             # message = request.POST.get('content','')
             contact_name = form.cleaned_data['contact_name']
             subject = form.cleaned_data['content_subject']
-            message = """Message from """ + contact_name + """. email-ID is: """ + sender + form.cleaned_data['content']
             sender = form.cleaned_data['contact_email']
+            message = """Message from """ + contact_name + """. email-ID is: """ + sender + form.cleaned_data['content']
             cc_myself = form.cleaned_data['cc_myself']
 
             recipients = ['assamcollegecode.pythonanywhere@gmail.com']
