@@ -1,4 +1,4 @@
-{% extends "personal/header.html" %} {% block content %}
+{% extends "personal/header.html" %} {% load static %} {% include 'personal/includes/disclaimer.html'%} {% block content %}
 <div class="container-fluid" hidden>
     The names of the provincialised colleges are as per the list published by
     <a href="http://www.dheassam.gov.in/colleges.asp" target="_blank">DHE, Assam</a> on its web site.</td>
@@ -31,7 +31,7 @@
     <div class="row">
         <div class="col-12">
             <nav id="navbar-example" class="navbar navbar-light bg-light">
-                <ol class="nav nav-pills">
+                <ul class="nav nav-pills"list-unstyled>
                     <li class="nav-item">
                         <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
                     </li>
@@ -110,7 +110,7 @@
                     <li class="nav-item">
                         <a class="nav-link {% if colleges_Y|length == 0%} disabled {% endif %}" href="#Z">Z</a>
                     </li>
-                </ol>
+                </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -124,7 +124,7 @@
                 <div class="card-body p-0 text-center">
                     {% if colleges_A %}
                     <h4 class="card-title bg-light py-3" id="A">A</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_A %}
                         <li>
                             <p>
@@ -134,12 +134,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_B %}
                     <h4 class="card-title bg-light py-3" id="B">B</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_B %}
                         <li>
                             <p>
@@ -148,12 +148,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_C %}
                     <h4 class="card-title bg-light py-3" id="C">C</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_C %}
                         <li>
                             <p>
@@ -162,12 +162,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_D %}
                     <h4 class="card-title bg-light py-3" id="D">D</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_D %}
                         <li>
                             <p>
@@ -176,12 +176,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_E %}
                     <h4 class="card-title bg-light py-3" id="E">E</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_E %}
                         <li>
                             <p>
@@ -190,12 +190,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_F %}
                     <h4 class="card-title bg-light py-3" id="F">F</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_F %}
                         <li>
                             <p>
@@ -204,12 +204,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_G %}
                     <h4 class="card-title bg-light py-3" id="G">G</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_G %}
                         <li>
                             <p>
@@ -218,12 +218,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_H %}
                     <h4 class="card-title bg-light py-3" id="H">H</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_H %}
                         <li>
                             <p>
@@ -232,12 +232,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_I %}    
                     <h4 class="card-title bg-light py-3" id="I">I</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_I %}
                         <li>
                             <p>
@@ -246,12 +246,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_J %}
                     <h4 class="card-title bg-light py-3" id="J">J</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_J %}
                         <li>
                             <p>
@@ -260,12 +260,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_K %}
                     <h4 class="card-title bg-light py-3" id="K">K</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_K %}
                         <li>
                             <p>
@@ -274,12 +274,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_L %}
                     <h4 class="card-title bg-light py-3" id="L">L</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_L %}
                         <li>
                             <p>
@@ -288,12 +288,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_M %}
                     <h4 class="card-title bg-light py-3" id="M">M</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_M %}
                         <li>
                             <p>
@@ -302,12 +302,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_N %}
                     <h4 class="card-title bg-light py-3" id="N">N</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_N %}
                         <li>
                             <p>
@@ -316,12 +316,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_O %}
                     <h4 class="card-title bg-light py-3" id="O">O</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_O %}
                         <li>
                             <p>
@@ -330,12 +330,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_P %}
                     <h4 class="card-title bg-light py-3" id="P">P</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_P %}
                         <li>
                             <p>
@@ -344,12 +344,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_Q %}
                     <h4 class="card-title bg-light py-3" id="Q">Q</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_Q %}
                         <li>
                             <p>
@@ -358,12 +358,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_R %}
                     <h4 class="card-title bg-light py-3" id="R">R</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_R %}
                         <li>
                             <p>
@@ -372,12 +372,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_S %}
                     <h4 class="card-title bg-light py-3" id="S">S</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_S %}
                         <li>
                             <p>
@@ -386,12 +386,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_T %}
                     <h4 class="card-title bg-light py-3" id="T">T</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_T %}
                         <li>
                             <p>
@@ -400,12 +400,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_U %}
                     <h4 class="card-title bg-light py-3" id="U">U</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_U %}
                         <li>
                             <p>
@@ -414,12 +414,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_V %}
                     <h4 class="card-title bg-light py-3" id="V">V</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_V %}
                         <li>
                             <p>
@@ -428,12 +428,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_W %}
                     <h4 class="card-title bg-light py-3" id="W">W</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_W %}
                         <li>
                             <p>
@@ -442,12 +442,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_X %}
                     <h4 class="card-title bg-light py-3" id="X">X</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_X %}
                         <li>
                             <p>
@@ -456,12 +456,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_Y %}
                     <h4 class="card-title bg-light py-3" id="Y">Y</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_Y %}
                         <li>
                             <p>
@@ -470,12 +470,12 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
 
                     {% if colleges_Z %}
                     <h4 class="card-title bg-light py-3" id="Z">Z</h4>
-                    <ol class="card-text m-3 " type="1">
+                    <ul class="card-text m-3 list-unstyled" type="1">
                         {% for college in colleges_Z %}
                         <li>
                             <p>
@@ -484,7 +484,7 @@
                             </p>
                         </li>
                         {% endfor %}
-                    </ol>
+                    </ul>
                     {% endif %}
                 </div>
             </div>
