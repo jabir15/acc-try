@@ -1,4 +1,4 @@
-{% extends "personal/header.html" %} {% load static %} {% include 'personal/includes/disclaimer.html'%} {% block content %}
+{% extends "personal/header.html" %} {% load static %} {% block content %} {% include 'personal/includes/disclaimer.html'%}
 <div class="container-fluid" hidden>
     The names of the provincialised colleges are as per the list published by
     <a href="http://www.dheassam.gov.in/colleges.asp" target="_blank">DHE, Assam</a> on its web site.</td>
@@ -24,9 +24,11 @@
 
 
 </div>
-<div class="container-fluid">
+<div class="container-fluid" id="maincontent">
     <div class="row">
-        <h3>Provincialised Colleges of ASSAM</h3>
+        <div class="col-12 text-center">
+            <h4>Provincialised Colleges of ASSAM</h4>
+        </div>
     </div>
     <div class="row">
         <div class="col-12">
