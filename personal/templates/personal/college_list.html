@@ -1,497 +1,461 @@
 {% extends "personal/header.html" %} {% load static %} {% block content %} {% include 'personal/includes/disclaimer.html'%}
-<div class="container-fluid" hidden>
-    The names of the provincialised colleges are as per the list published by
-    <a href="http://www.dheassam.gov.in/colleges.asp" target="_blank">DHE, Assam</a> on its web site.</td>
-    <a href="http://dheassam.gov.in/colleges_1.asp" target="_blank">Click here </a> to visit the Directorate of Higher Education, Assam for the official list of provincialised colleges
-    in Assam. The Principals of the colleges are earnestly requested to check the names and addresses of the colleges and,
-    if required, they may send an email to me (kabirhussain57@gmail.com) with the correct name and address of the concerned
-    college to be uploaded here. Registration procedures to register a domain name under
-    <strong>ac.in</strong> and
-    <strong>edu.in</strong>
-    <a href="http://www.registry.ernet.in/" title="ERNET" target="_blank">Click here to open the website of ERNET - Domain Registrar for
-        <strong>ac.in</strong> and
-        <strong>edu.in</strong>
-    </a>
-    <a href="../pdf/provincialised colleges/301_Colleges_District-wise.pdf" title="DHE's List of 301 Colleges" target="_blank">DHE has published a list of
-        <strong>301 numbers</strong> of Govt./ Provincialised Colleges of Assam on
-        <strong>December 22, 2016</strong>:
-        <br/>Click to download the list as pdf.</a>
-
-    <br/>List of hyperlinks as provided below are in alphabetical-order and September 11, 2017.
-    <br/>Hyperlinks are provided for users' convenience only and do not constitute endorsement of any information contained therein.
-    From this webapge, users may not get link to a particular “college website” or may be linked to “other unexpected website”,
-    if, either domain name or URL of that particular “college website” being changed after the date of updation of this webpage.
-
-
-</div>
-<div class="container-fluid" id="maincontent">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12">
+            <p>
+                The names of the provincialised colleges are as per the list published by
+                <a href="http://www.dheassam.gov.in/colleges.asp" target="_blank">DHE, Assam</a> on its web site.
+            </p>
+            <p>
+                <a href="http://dheassam.gov.in/colleges_1.asp" target="_blank">Click here </a> to visit the Directorate of Higher Education, Assam for the official list of provincialised
+                colleges in Assam.
+            </p>
+            <p>
+                The Principals of the colleges are earnestly requested to check the names and addresses of the colleges and, if required,
+                they may send an
+                <a href="{% url 'contact' %}"> email</a> with the correct name and address of the concerned college to be uploaded here.
+            </p>
+            <p>
+                Registration procedures to register a domain name under
+                <strong>ac.in</strong> and
+                <strong>edu.in</strong>
+                <a href="http://www.registry.ernet.in/" title="ERNET" target="_blank">Click here to open the website of ERNET - Domain Registrar for
+                    <strong>ac.in</strong> and
+                    <strong>edu.in</strong>
+                </a>
+            </p>
+            <p>
+                DHE has published a list of
+                <strong>301 numbers</strong> of Govt./ Provincialised Colleges of Assam on
+                <strong>December 22, 2016.</strong>
+                <a href="../pdf/provincialised colleges/301_Colleges_District-wise.pdf" title="DHE's List of 301 Colleges" target="_blank">
+                    Click to download the list as pdf.
+                </a>
+            </p>
+
+            <p>
+                Hyperlinks are provided for users' convenience only and do not constitute endorsement of any information contained therein.
+                From this webapge, users may not get link to a particular “college website” or may be linked to “other unexpected
+                website”, if, either domain name or URL of that particular “college website” being changed after the date
+                of updation of this webpage.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center bg-light p-2 rounded-top">
             <h4>Provincialised Colleges of ASSAM</h4>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <nav id="navbar-example" class="navbar navbar-light bg-light">
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_B|length == 0%} disabled {% endif %}" href="#B">B</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_C|length == 0%} disabled {% endif %}" href="#C">C</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_D|length == 0%} disabled {% endif %}" href="#D">D</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_E|length == 0%} disabled {% endif %}" href="#E">E</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_F|length == 0%} disabled {% endif %}" href="#F">F</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_G|length == 0%} disabled {% endif %}" href="#G">G</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_H|length == 0%} disabled {% endif %}" href="#H">H</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_I|length == 0%} disabled {% endif %}" href "#I">I</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_J|length == 0%} disabled {% endif %}" href="#J">J</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_K|length == 0%} disabled {% endif %}" href="#K">K</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_L|length == 0%} disabled {% endif %}" href="#L">L</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_M|length == 0%} disabled {% endif %}" href="#M">M</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_N|length == 0%} disabled {% endif %}" href="#N">N</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_O|length == 0%} disabled {% endif %}" href="#O">O</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_P|length == 0%} disabled {% endif %}" href="#P">P</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_Q|length == 0%} disabled {% endif %}" href="#Q">Q</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_R|length == 0%} disabled {% endif %}" href="#R">R</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_S|length == 0%} disabled {% endif %}" href="#S">S</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_T|length == 0%} disabled {% endif %}" href="#T">T</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_U|length == 0%} disabled {% endif %}" href="#U">U</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_V|length == 0%} disabled {% endif %}" href="#V">V</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_W|length == 0%} disabled {% endif %}" href="#W">W</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_X|length == 0%} disabled {% endif %}" href="#X">X</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_Y|length == 0%} disabled {% endif %}" href="#Y">Y</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if colleges_Y|length == 0%} disabled {% endif %}" href="#Z">Z</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </nav>
+</div>
+<nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-sm-center" style="top:56px;">
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_B|length == 0%} disabled {% endif %}" href="#B">B</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_C|length == 0%} disabled {% endif %}" href="#C">C</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_D|length == 0%} disabled {% endif %}" href="#D">D</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_E|length == 0%} disabled {% endif %}" href="#E">E</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_F|length == 0%} disabled {% endif %}" href="#F">F</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_G|length == 0%} disabled {% endif %}" href="#G">G</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_H|length == 0%} disabled {% endif %}" href="#H">H</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_I|length == 0%} disabled {% endif %}" href="#I">I</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_J|length == 0%} disabled {% endif %}" href="#J">J</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_K|length == 0%} disabled {% endif %}" href="#K">K</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_L|length == 0%} disabled {% endif %}" href="#L">L</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_M|length == 0%} disabled {% endif %}" href="#M">M</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_N|length == 0%} disabled {% endif %}" href="#N">N</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_O|length == 0%} disabled {% endif %}" href="#O">O</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_P|length == 0%} disabled {% endif %}" href="#P">P</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_Q|length == 0%} disabled {% endif %}" href="#Q">Q</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_R|length == 0%} disabled {% endif %}" href="#R">R</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_S|length == 0%} disabled {% endif %}" href="#S">S</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_T|length == 0%} disabled {% endif %}" href="#T">T</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_U|length == 0%} disabled {% endif %}" href="#U">U</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_V|length == 0%} disabled {% endif %}" href="#V">V</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_W|length == 0%} disabled {% endif %}" href="#W">W</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_X|length == 0%} disabled {% endif %}" href="#X">X</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_Y|length == 0%} disabled {% endif %}" href="#Y">Y</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if colleges_Z|length == 0%} disabled {% endif %}" href="#Z">Z</a>
+        </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <div class="input-group my-2">
+            <!-- <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search"> -->
         </div>
-    </div>
+    </form>
+</nav>
+<div class="container-fluid"></div>
     <div class="row">
         <div class="col-12">
-            <div class="contactcard" data-spy="scroll" data-target="#navbar-example" data-offset="100" style="position:relative; height:400px; overflow:auto;">
-                <div class="card-body p-0 text-center">
-                    {% if colleges_A %}
-                    <h4 class="card-title bg-light py-3" id="A">A</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_A %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                                </a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_B %}
-                    <h4 class="card-title bg-light py-3" id="B">B</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_B %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_C %}
-                    <h4 class="card-title bg-light py-3" id="C">C</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_C %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_D %}
-                    <h4 class="card-title bg-light py-3" id="D">D</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_D %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_E %}
-                    <h4 class="card-title bg-light py-3" id="E">E</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_E %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_F %}
-                    <h4 class="card-title bg-light py-3" id="F">F</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_F %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_G %}
-                    <h4 class="card-title bg-light py-3" id="G">G</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_G %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_H %}
-                    <h4 class="card-title bg-light py-3" id="H">H</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_H %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_I %}    
-                    <h4 class="card-title bg-light py-3" id="I">I</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_I %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_J %}
-                    <h4 class="card-title bg-light py-3" id="J">J</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_J %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_K %}
-                    <h4 class="card-title bg-light py-3" id="K">K</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_K %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_L %}
-                    <h4 class="card-title bg-light py-3" id="L">L</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_L %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_M %}
-                    <h4 class="card-title bg-light py-3" id="M">M</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_M %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_N %}
-                    <h4 class="card-title bg-light py-3" id="N">N</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_N %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_O %}
-                    <h4 class="card-title bg-light py-3" id="O">O</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_O %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_P %}
-                    <h4 class="card-title bg-light py-3" id="P">P</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_P %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_Q %}
-                    <h4 class="card-title bg-light py-3" id="Q">Q</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_Q %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_R %}
-                    <h4 class="card-title bg-light py-3" id="R">R</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_R %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_S %}
-                    <h4 class="card-title bg-light py-3" id="S">S</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_S %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_T %}
-                    <h4 class="card-title bg-light py-3" id="T">T</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_T %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_U %}
-                    <h4 class="card-title bg-light py-3" id="U">U</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_U %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_V %}
-                    <h4 class="card-title bg-light py-3" id="V">V</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_V %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_W %}
-                    <h4 class="card-title bg-light py-3" id="W">W</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_W %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_X %}
-                    <h4 class="card-title bg-light py-3" id="X">X</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_X %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_Y %}
-                    <h4 class="card-title bg-light py-3" id="Y">Y</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_Y %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-
-                    {% if colleges_Z %}
-                    <h4 class="card-title bg-light py-3" id="Z">Z</h4>
-                    <ul class="card-text m-3 list-unstyled" type="1">
-                        {% for college in colleges_Z %}
-                        <li>
-                            <p>
-                                <a href="{{ college.college_url }}" target="_blank">
-                                    {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
-                            </p>
-                        </li>
-                        {% endfor %}
-                    </ol>
-                    {% endif %}
-                </div>
+        <div class="contactcard" data-spy="scroll" data-target="#navbar-example" data-offset="100" style="position:relative; height:400px; overflow:auto;">
+            <div class="card-body p-0 text-center">
+                {% if colleges_A %}
+                <h4 class="card-title bg-light py-3" id="A">A</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_A %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                            </a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_B %}
+                <h4 class="card-title bg-light py-3" id="B">B</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_B %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_C %}
+                <h4 class="card-title bg-light py-3" id="C">C</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_C %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_D %}
+                <h4 class="card-title bg-light py-3" id="D">D</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_D %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_E %}
+                <h4 class="card-title bg-light py-3" id="E">E</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_E %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_F %}
+                <h4 class="card-title bg-light py-3" id="F">F</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_F %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_G %}
+                <h4 class="card-title bg-light py-3" id="G">G</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_G %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_H %}
+                <h4 class="card-title bg-light py-3" id="H">H</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_H %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_I %}
+                <h4 class="card-title bg-light py-3" id="I">I</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_I %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_J %}
+                <h4 class="card-title bg-light py-3" id="J">J</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_J %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_K %}
+                <h4 class="card-title bg-light py-3" id="K">K</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_K %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_L %}
+                <h4 class="card-title bg-light py-3" id="L">L</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_L %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_M %}
+                <h4 class="card-title bg-light py-3" id="M">M</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_M %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_N %}
+                <h4 class="card-title bg-light py-3" id="N">N</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_N %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_O %}
+                <h4 class="card-title bg-light py-3" id="O">O</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_O %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_P %}
+                <h4 class="card-title bg-light py-3" id="P">P</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_P %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_Q %}
+                <h4 class="card-title bg-light py-3" id="Q">Q</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_Q %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_R %}
+                <h4 class="card-title bg-light py-3" id="R">R</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_R %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_S %}
+                <h4 class="card-title bg-light py-3" id="S">S</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_S %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_T %}
+                <h4 class="card-title bg-light py-3" id="T">T</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_T %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_U %}
+                <h4 class="card-title bg-light py-3" id="U">U</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_U %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_V %}
+                <h4 class="card-title bg-light py-3" id="V">V</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_V %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_W %}
+                <h4 class="card-title bg-light py-3" id="W">W</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_W %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_X %}
+                <h4 class="card-title bg-light py-3" id="X">X</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_X %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_Y %}
+                <h4 class="card-title bg-light py-3" id="Y">Y</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_Y %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% if colleges_Z %}
+                <h4 class="card-title bg-light py-3" id="Z">Z</h4>
+                <ul class="card-text m-3 list-unstyled" type="1">
+                    {% for college in colleges_Z %}
+                    <li>
+                        <p>
+                            <a href="{{ college.college_url }}" target="_blank">
+                                {{ college }}, {{ college.full_address}} &ndash; {{ college.college_pincode}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
         </div>
-    </div>
+        </div>
 </div>
 
 {% endblock%}
