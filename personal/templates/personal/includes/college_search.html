@@ -1,3 +1,4 @@
+{% if colleges_filter %}
 <span id="searchResults">
     <h4 class="bg-light border-top border-bottom py-3">Search Results</h4>
     <ul class="m-3 list-unstyled" type="1">
@@ -11,3 +12,15 @@
         {% endfor %}
     </ul>
 </span>
+{% else %}
+<span id="searchResults">
+    <h4 class="bg-light border-top border-bottom py-3">Search Results</h4>
+    <ul class="m-3 list-unstyled" type="1">
+        <li>
+            <p>
+                <em>No data found</em>
+            </p>
+        </li>
+    </ul>
+</span>
+{% endif %}

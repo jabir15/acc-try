@@ -47,7 +47,7 @@
             <h4>Provincialised Colleges of ASSAM</h4>
         </div>
     </div>
-    <nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-center " style="top:56px;">
+    <nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-around" style="top:56px;">
         <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
                 <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
@@ -129,14 +129,23 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" action="/search/" method="POST">{% csrf_token %}
-            <div class="input-group my-2">
+            <div class="input-group my-2 ">
                 <input type="text" class="form-control" id="searchColleges" placeholder="Search">
+                <div class="input-group-append ">
+                    <div class="input-group-text">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>                
             </div>
+            <small id="passwordHelpInline" class="p-1 text-muted">
+                    Type to search by name, use d: to search by district
+            </small>
         </form>
     </nav>
     <div class="row m-0" id="listRow">
         <div class="col-12 text-center p-0 bg-white rounded-bottom" data-spy="scroll" data-target="#navbar-example" data-offset="100"
             style="position:relative; height:400px; overflow-y:auto;">
+            {% include 'personal/includes/college_search.html'%}
             <span id="collegeList" style="display:block;">
                 {% if colleges_A %}
                 <h4 class="bg-light border-top border-bottom py-3 p-0" id="A">A</h4>
@@ -453,7 +462,6 @@
                 </ul>
                 {% endif %}
             </span>
-            {% include 'personal/includes/college_search.html'%}
         </div>
     </div>
 </div>
@@ -461,14 +469,14 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         $("#searchResults").hide();
     });
 
 
     $("#searchColleges").keyup(function () {
         query = $(this).val();
-        if(query==""){
+        if (query == "") {
             $("#searchResults").hide();
             $("#collegeList").fadeIn("slow");
         } else {
@@ -478,8 +486,8 @@
         $.ajax({
             method: "POST",
             url: "/search/",
-            data: {'query':query, 'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()},
-            success: function(data){
+            data: { 'query': query, 'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val() },
+            success: function (data) {
                 $("#searchResults").html(data);
             }
         });
