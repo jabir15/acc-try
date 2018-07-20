@@ -13,6 +13,7 @@ from .models import College
 #         return College.objects.all().order_by('name')
 
 def colleges(request):
+    
     college_list_A = College.objects.filter(name__startswith='A').order_by('name')
     college_list_B = College.objects.filter(name__startswith='B').order_by('name')
     college_list_C = College.objects.filter(name__startswith='C').order_by('name')
@@ -67,6 +68,14 @@ def colleges(request):
     }
     
     return render(request, 'personal/college_list.html', list_of_colleges)
+
+def search_colleges(request):
+    if request.method=="POST":
+        query = request.POST.get('query','')
+    
+    college_filter = College.objects.filter(name__startswith=query)
+    return render(request, 'personal/includes/college_search.html', {'colleges_filter':college_filter})
+
 
 def index(request):
     response = render(request, 'personal/home.html')

@@ -1,6 +1,6 @@
 {% extends "personal/header.html" %} {% load static %} {% block content %} {% include 'personal/includes/disclaimer.html'%}
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="contentRow">
         <div class="col-12">
             <p>
                 The names of the provincialised colleges are as per the list published by
@@ -39,109 +39,108 @@
                 website”, if, either domain name or URL of that particular “college website” being changed after the date
                 of updation of this webpage.
             </p>
+            <br>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 text-center bg-light p-2 rounded-top">
+    <div class="row m-0">
+        <div class="col-12 text-center bg-light rounded-top p-2">
             <h4>Provincialised Colleges of ASSAM</h4>
         </div>
     </div>
-</div>
-<nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-sm-center" style="top:56px;">
-    <ul class="nav nav-pills nav-justified">
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_B|length == 0%} disabled {% endif %}" href="#B">B</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_C|length == 0%} disabled {% endif %}" href="#C">C</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_D|length == 0%} disabled {% endif %}" href="#D">D</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_E|length == 0%} disabled {% endif %}" href="#E">E</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_F|length == 0%} disabled {% endif %}" href="#F">F</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_G|length == 0%} disabled {% endif %}" href="#G">G</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_H|length == 0%} disabled {% endif %}" href="#H">H</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_I|length == 0%} disabled {% endif %}" href="#I">I</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_J|length == 0%} disabled {% endif %}" href="#J">J</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_K|length == 0%} disabled {% endif %}" href="#K">K</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_L|length == 0%} disabled {% endif %}" href="#L">L</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_M|length == 0%} disabled {% endif %}" href="#M">M</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_N|length == 0%} disabled {% endif %}" href="#N">N</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_O|length == 0%} disabled {% endif %}" href="#O">O</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_P|length == 0%} disabled {% endif %}" href="#P">P</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_Q|length == 0%} disabled {% endif %}" href="#Q">Q</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_R|length == 0%} disabled {% endif %}" href="#R">R</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_S|length == 0%} disabled {% endif %}" href="#S">S</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_T|length == 0%} disabled {% endif %}" href="#T">T</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_U|length == 0%} disabled {% endif %}" href="#U">U</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_V|length == 0%} disabled {% endif %}" href="#V">V</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_W|length == 0%} disabled {% endif %}" href="#W">W</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_X|length == 0%} disabled {% endif %}" href="#X">X</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_Y|length == 0%} disabled {% endif %}" href="#Y">Y</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if colleges_Z|length == 0%} disabled {% endif %}" href="#Z">Z</a>
-        </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-        <div class="input-group my-2">
-            <!-- <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search"> -->
-        </div>
-    </form>
-</nav>
-<div class="container-fluid"></div>
-    <div class="row">
-        <div class="col-12">
-        <div class="contactcard" data-spy="scroll" data-target="#navbar-example" data-offset="100" style="position:relative; height:400px; overflow:auto;">
-            <div class="card-body p-0 text-center">
+    <nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-center " style="top:56px;">
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_B|length == 0%} disabled {% endif %}" href="#B">B</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_C|length == 0%} disabled {% endif %}" href="#C">C</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_D|length == 0%} disabled {% endif %}" href="#D">D</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_E|length == 0%} disabled {% endif %}" href="#E">E</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_F|length == 0%} disabled {% endif %}" href="#F">F</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_G|length == 0%} disabled {% endif %}" href="#G">G</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_H|length == 0%} disabled {% endif %}" href="#H">H</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_I|length == 0%} disabled {% endif %}" href="#I">I</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_J|length == 0%} disabled {% endif %}" href="#J">J</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_K|length == 0%} disabled {% endif %}" href="#K">K</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_L|length == 0%} disabled {% endif %}" href="#L">L</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_M|length == 0%} disabled {% endif %}" href="#M">M</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_N|length == 0%} disabled {% endif %}" href="#N">N</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_O|length == 0%} disabled {% endif %}" href="#O">O</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_P|length == 0%} disabled {% endif %}" href="#P">P</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_Q|length == 0%} disabled {% endif %}" href="#Q">Q</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_R|length == 0%} disabled {% endif %}" href="#R">R</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_S|length == 0%} disabled {% endif %}" href="#S">S</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_T|length == 0%} disabled {% endif %}" href="#T">T</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_U|length == 0%} disabled {% endif %}" href="#U">U</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_V|length == 0%} disabled {% endif %}" href="#V">V</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_W|length == 0%} disabled {% endif %}" href="#W">W</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_X|length == 0%} disabled {% endif %}" href="#X">X</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_Y|length == 0%} disabled {% endif %}" href="#Y">Y</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if colleges_Z|length == 0%} disabled {% endif %}" href="#Z">Z</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/search/" method="POST">{% csrf_token %}
+            <div class="input-group my-2">
+                <input type="text" class="form-control" id="searchColleges" placeholder="Search">
+            </div>
+        </form>
+    </nav>
+    <div class="row m-0" id="listRow">
+        <div class="col-12 text-center p-0 bg-white rounded-bottom" data-spy="scroll" data-target="#navbar-example" data-offset="100"
+            style="position:relative; height:400px; overflow-y:auto;">
+            <span id="collegeList" style="display:block;">
                 {% if colleges_A %}
-                <h4 class="card-title bg-light py-3" id="A">A</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3 p-0" id="A">A</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_A %}
                     <li>
                         <p>
@@ -153,8 +152,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_B %}
-                <h4 class="card-title bg-light py-3" id="B">B</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="B">B</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_B %}
                     <li>
                         <p>
@@ -165,8 +164,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_C %}
-                <h4 class="card-title bg-light py-3" id="C">C</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="C">C</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_C %}
                     <li>
                         <p>
@@ -177,8 +176,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_D %}
-                <h4 class="card-title bg-light py-3" id="D">D</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="D">D</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_D %}
                     <li>
                         <p>
@@ -189,8 +188,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_E %}
-                <h4 class="card-title bg-light py-3" id="E">E</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="E">E</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_E %}
                     <li>
                         <p>
@@ -201,8 +200,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_F %}
-                <h4 class="card-title bg-light py-3" id="F">F</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="F">F</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_F %}
                     <li>
                         <p>
@@ -213,8 +212,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_G %}
-                <h4 class="card-title bg-light py-3" id="G">G</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="G">G</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_G %}
                     <li>
                         <p>
@@ -225,8 +224,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_H %}
-                <h4 class="card-title bg-light py-3" id="H">H</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="H">H</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_H %}
                     <li>
                         <p>
@@ -237,8 +236,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_I %}
-                <h4 class="card-title bg-light py-3" id="I">I</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="I">I</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_I %}
                     <li>
                         <p>
@@ -249,8 +248,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_J %}
-                <h4 class="card-title bg-light py-3" id="J">J</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="J">J</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_J %}
                     <li>
                         <p>
@@ -261,8 +260,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_K %}
-                <h4 class="card-title bg-light py-3" id="K">K</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="K">K</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_K %}
                     <li>
                         <p>
@@ -273,8 +272,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_L %}
-                <h4 class="card-title bg-light py-3" id="L">L</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="L">L</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_L %}
                     <li>
                         <p>
@@ -285,8 +284,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_M %}
-                <h4 class="card-title bg-light py-3" id="M">M</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="M">M</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_M %}
                     <li>
                         <p>
@@ -297,8 +296,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_N %}
-                <h4 class="card-title bg-light py-3" id="N">N</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="N">N</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_N %}
                     <li>
                         <p>
@@ -309,8 +308,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_O %}
-                <h4 class="card-title bg-light py-3" id="O">O</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="O">O</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_O %}
                     <li>
                         <p>
@@ -321,8 +320,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_P %}
-                <h4 class="card-title bg-light py-3" id="P">P</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="P">P</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_P %}
                     <li>
                         <p>
@@ -333,8 +332,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_Q %}
-                <h4 class="card-title bg-light py-3" id="Q">Q</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="Q">Q</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_Q %}
                     <li>
                         <p>
@@ -345,8 +344,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_R %}
-                <h4 class="card-title bg-light py-3" id="R">R</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="R">R</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_R %}
                     <li>
                         <p>
@@ -357,8 +356,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_S %}
-                <h4 class="card-title bg-light py-3" id="S">S</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="S">S</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_S %}
                     <li>
                         <p>
@@ -369,8 +368,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_T %}
-                <h4 class="card-title bg-light py-3" id="T">T</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="T">T</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_T %}
                     <li>
                         <p>
@@ -381,8 +380,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_U %}
-                <h4 class="card-title bg-light py-3" id="U">U</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="U">U</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_U %}
                     <li>
                         <p>
@@ -393,8 +392,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_V %}
-                <h4 class="card-title bg-light py-3" id="V">V</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="V">V</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_V %}
                     <li>
                         <p>
@@ -405,8 +404,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_W %}
-                <h4 class="card-title bg-light py-3" id="W">W</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="W">W</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_W %}
                     <li>
                         <p>
@@ -417,8 +416,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_X %}
-                <h4 class="card-title bg-light py-3" id="X">X</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="X">X</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_X %}
                     <li>
                         <p>
@@ -429,8 +428,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_Y %}
-                <h4 class="card-title bg-light py-3" id="Y">Y</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="Y">Y</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_Y %}
                     <li>
                         <p>
@@ -441,8 +440,8 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_Z %}
-                <h4 class="card-title bg-light py-3" id="Z">Z</h4>
-                <ul class="card-text m-3 list-unstyled" type="1">
+                <h4 class="bg-light border-top border-bottom py-3" id="Z">Z</h4>
+                <ul class="m-3 list-unstyled" type="1">
                     {% for college in colleges_Z %}
                     <li>
                         <p>
@@ -453,9 +452,37 @@
                     {% endfor %}
                 </ul>
                 {% endif %}
-            </div>
+            </span>
+            {% include 'personal/includes/college_search.html'%}
         </div>
-        </div>
+    </div>
 </div>
+<br>
 
-{% endblock%}
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#searchResults").hide();
+    });
+
+
+    $("#searchColleges").keyup(function () {
+        query = $(this).val();
+        if(query==""){
+            $("#searchResults").hide();
+            $("#collegeList").fadeIn("slow");
+        } else {
+            $("#collegeList").hide();
+            $("#searchResults").fadeIn("slow");
+        }
+        $.ajax({
+            method: "POST",
+            url: "/search/",
+            data: {'query':query, 'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()},
+            success: function(data){
+                $("#searchResults").html(data);
+            }
+        });
+
+    });
+</script> {% endblock%}
