@@ -8,6 +8,7 @@ urlpatterns = [
     path('favicon.ico/', favicon_view, name='favicon'),
     path('contact/',views.contact,name='contact'),
     path('about/',views.about,name='about'),
+    path('search/', views.search_colleges ,name='search-colleges'),
     path('listofcolleges/', views.colleges ,name='list-of-colleges'),
     path('',views.index, name='index'),
 ]

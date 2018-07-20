@@ -13,6 +13,7 @@ from .models import College
 #         return College.objects.all().order_by('name')
 
 def colleges(request):
+    
     college_list_A = College.objects.filter(name__startswith='A').order_by('name')
     college_list_B = College.objects.filter(name__startswith='B').order_by('name')
     college_list_C = College.objects.filter(name__startswith='C').order_by('name')
@@ -67,6 +68,26 @@ def colleges(request):
     }
     
     return render(request, 'personal/college_list.html', list_of_colleges)
+
+def search_colleges(request):
+    if request.method=="POST":
+        query = request.POST.get('query','').lower()
+    
+    if (query.find(':')>=0):
+        tag = query.split(':')[0].strip()
+        q = query.split(':')[1].strip()
+        if tag.startswith('d'):
+            college_filter = College.objects.filter(college_district__startswith=q).order_by('college_district')
+        elif tag.startswith('a'):
+            college_filter = College.objects.filter(full_address__icontains=q).order_by('full_address')
+        else:
+            college_filter = College.objects.filter(name__startswith=q)
+
+    else:
+        college_filter = College.objects.filter(name__startswith=query)
+
+    return render(request, 'personal/includes/college_search.html', {'colleges_filter':college_filter})
+
 
 def index(request):
     response = render(request, 'personal/home.html')
