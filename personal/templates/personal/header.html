@@ -31,12 +31,15 @@
 		.errorlist + p > textarea, .errorlist + p > input[type=text] {
 			border: 1px solid red;
 		}
+		.form-control:focus {
+			border-color: #ced4da;  box-shadow: none; -webkit-box-shadow: none;
+		} 
 	</style>
 
 </head>
 
 <body class="body" style="background-color:#eeeeee;">
-	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="z-index:2;">
 		<a class="navbar-brand" href="/">
 			<img src="{% static 'personal/img/thecollegecodebanner.png' %}" height="30" alt="brand">
 		</a>
@@ -106,6 +109,7 @@
 			$("#maincontent").css('filter', 'blur(0px)');
 		});	
 	</script>
+	{% block individualscript %}{% endblock %}
 
 </body>
 

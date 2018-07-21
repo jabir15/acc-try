@@ -71,7 +71,7 @@ def colleges(request):
 
 def search_colleges(request):
     if request.method=="POST":
-        query = request.POST.get('query','').lower()
+        query = request.POST.get('query','').strip().lower()
     
     if (query.find(':')>=0):
         tag = query.split(':')[0].strip()
@@ -81,10 +81,10 @@ def search_colleges(request):
         elif tag.startswith('a'):
             college_filter = College.objects.filter(full_address__icontains=q).order_by('full_address')
         else:
-            college_filter = College.objects.filter(name__startswith=q)
+            college_filter = College.objects.filter(name__icontains=q)
 
     else:
-        college_filter = College.objects.filter(name__startswith=query)
+        college_filter = College.objects.filter(name__icontains=query)
 
     return render(request, 'personal/includes/college_search.html', {'colleges_filter':college_filter})
 
