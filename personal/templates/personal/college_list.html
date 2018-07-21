@@ -128,14 +128,14 @@
                 <a class="nav-link {% if colleges_Z|length == 0%} disabled {% endif %}" href="#Z">Z</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="/search/" method="POST">{% csrf_token %}
+        <form class="form-inline my-2 my-lg-0" action="/search/" method="POST" role="search">{% csrf_token %}
             <div class="input-group my-2 ">
-                <input type="text" class="form-control" id="searchColleges" placeholder="Search">
-                <div class="input-group-append ">
+                <div class="input-group-prepend ">
                     <div class="input-group-text">
                         <i class="fas fa-search"></i>
                     </div>
                 </div>                
+                <input type="search" class="form-control" id="searchColleges">
             </div>
             <small id="passwordHelpInline" class="p-1 text-muted">
                     Type to search by name, use d: to search by district
