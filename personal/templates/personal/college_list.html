@@ -48,7 +48,7 @@
         </div>
     </div>
     <nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-around" style="top:56px; z-index:1;">
-        <ul class="nav nav-pills nav-justified">
+        <ul class="nav nav-pills nav-justified" id="abcdes">
             <li class="nav-item">
                 <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
             </li>
@@ -153,7 +153,7 @@
             {% include 'personal/includes/college_search.html'%}
             <span id="collegeList">
                 {% if colleges_A %}
-                <h4 class="bg-light border-top border-bottom py-3 p-0" id="A">A</h4>
+                <h4 class="bg-light border-top border-bottom py-3" id="A">A</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_A %}
                     <li>
