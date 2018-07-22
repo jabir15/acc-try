@@ -14,13 +14,14 @@
 	<script src="{% static 'personal/js/jquery.cookie.js' %}"></script>
 
 	<style type="text/css">
-		
 		.card-img-top {
-			height: 50%;			
+			height: 50%;
 		}
+
 		.card-img-bottom {
 			height: 50%;
 		}
+
 		.errorlist {
 			color: red;
 			list-style-type: none;
@@ -28,17 +29,28 @@
 			margin: 0;
 			font-size: small;
 		}
-		.errorlist + p > textarea, .errorlist + p > input[type=text] {
+
+		.errorlist+p>textarea,
+		.errorlist+p>input[type=text] {
 			border: 1px solid red;
 		}
+
 		.form-control:focus {
-			border-color: #ced4da;  box-shadow: none; -webkit-box-shadow: none;
-		} 
+			border-color: #ced4da;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+
+		@media only screen and (max-width: 640px) {
+			#abcdes {
+				display: none;
+			}
+		}
 	</style>
 
 </head>
 
-<body class="body" style="background-color:#eeeeee;">
+<body style="background-color:#eeeeee;">
 	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="z-index:2;">
 		<a class="navbar-brand" href="/">
 			<img src="{% static 'personal/img/thecollegecodebanner.png' %}" height="30" alt="brand">
@@ -108,8 +120,7 @@
 			$.cookie('agreeDisclaimer', 'yes', { expires: date, path: '/' });
 			$("#maincontent").css('filter', 'blur(0px)');
 		});	
-	</script>
-	{% block individualscript %}{% endblock %}
+	</script> {% block individualscript %}{% endblock %}
 
 </body>
 
