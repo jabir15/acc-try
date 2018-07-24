@@ -47,7 +47,7 @@
             <h4>Provincialised Colleges of ASSAM</h4>
         </div>
     </div>
-    <nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-around" style="top:56px; z-index:1;">
+    <nav id="navbar-example" class="navbar sticky-top navbar-light bg-light justify-content-around border-bottom" style="top:56px; z-index:2;">
         <ul class="nav nav-pills nav-justified" id="abcdes">
             <li class="nav-item">
                 <a class="nav-link {% if colleges_A|length == 0%} disabled {% endif %}" href="#A">A</a>
@@ -149,11 +149,11 @@
     </nav>
     <div class="row m-0" id="listRow">
         <div class="col-12 text-center p-0 bg-white rounded-bottom" data-spy="scroll" data-target="#navbar-example" data-offset="100"
-            style="position:relative; height:400px; overflow-y:auto;">
+            style="position:relative; height:400px; overflow-y:auto; z-index:1;">
             {% include 'personal/includes/college_search.html'%}
-            <span id="collegeList">
+            <div class="container-fluid p-0" id="collegeList">
                 {% if colleges_A %}
-                <h4 class="bg-light border-top border-bottom py-3" id="A">A</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="A">A</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_A %}
                     <li>
@@ -167,7 +167,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_B %}
-                <h4 class="bg-light border-top border-bottom py-3" id="B">B</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="B">B</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_B %}
                     <li>
@@ -181,7 +181,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_C %}
-                <h4 class="bg-light border-top border-bottom py-3" id="C">C</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="C">C</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_C %}
                     <li>
@@ -195,7 +195,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_D %}
-                <h4 class="bg-light border-top border-bottom py-3" id="D">D</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="D">D</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_D %}
                     <li>
@@ -209,7 +209,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_E %}
-                <h4 class="bg-light border-top border-bottom py-3" id="E">E</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="E">E</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_E %}
                     <li>
@@ -223,7 +223,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_F %}
-                <h4 class="bg-light border-top border-bottom py-3" id="F">F</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="F">F</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_F %}
                     <li>
@@ -237,7 +237,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_G %}
-                <h4 class="bg-light border-top border-bottom py-3" id="G">G</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="G">G</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_G %}
                     <li>
@@ -251,7 +251,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_H %}
-                <h4 class="bg-light border-top border-bottom py-3" id="H">H</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="H">H</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_H %}
                     <li>
@@ -265,7 +265,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_I %}
-                <h4 class="bg-light border-top border-bottom py-3" id="I">I</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="I">I</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_I %}
                     <li>
@@ -279,7 +279,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_J %}
-                <h4 class="bg-light border-top border-bottom py-3" id="J">J</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="J">J</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_J %}
                     <li>
@@ -293,7 +293,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_K %}
-                <h4 class="bg-light border-top border-bottom py-3" id="K">K</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="K">K</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_K %}
                     <li>
@@ -307,7 +307,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_L %}
-                <h4 class="bg-light border-top border-bottom py-3" id="L">L</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="L">L</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_L %}
                     <li>
@@ -321,7 +321,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_M %}
-                <h4 class="bg-light border-top border-bottom py-3" id="M">M</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="M">M</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_M %}
                     <li>
@@ -335,7 +335,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_N %}
-                <h4 class="bg-light border-top border-bottom py-3" id="N">N</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="N">N</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_N %}
                     <li>
@@ -349,7 +349,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_O %}
-                <h4 class="bg-light border-top border-bottom py-3" id="O">O</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="O">O</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_O %}
                     <li>
@@ -363,7 +363,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_P %}
-                <h4 class="bg-light border-top border-bottom py-3" id="P">P</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="P">P</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_P %}
                     <li>
@@ -377,7 +377,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_Q %}
-                <h4 class="bg-light border-top border-bottom py-3" id="Q">Q</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="Q">Q</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_Q %}
                     <li>
@@ -391,7 +391,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_R %}
-                <h4 class="bg-light border-top border-bottom py-3" id="R">R</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="R">R</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_R %}
                     <li>
@@ -405,7 +405,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_S %}
-                <h4 class="bg-light border-top border-bottom py-3" id="S">S</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="S">S</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_S %}
                     <li>
@@ -419,7 +419,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_T %}
-                <h4 class="bg-light border-top border-bottom py-3" id="T">T</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="T">T</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_T %}
                     <li>
@@ -433,7 +433,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_U %}
-                <h4 class="bg-light border-top border-bottom py-3" id="U">U</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="U">U</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_U %}
                     <li>
@@ -447,7 +447,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_V %}
-                <h4 class="bg-light border-top border-bottom py-3" id="V">V</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="V">V</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_V %}
                     <li>
@@ -461,7 +461,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_W %}
-                <h4 class="bg-light border-top border-bottom py-3" id="W">W</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="W">W</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_W %}
                     <li>
@@ -475,7 +475,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_X %}
-                <h4 class="bg-light border-top border-bottom py-3" id="X">X</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="X">X</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_X %}
                     <li>
@@ -489,7 +489,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_Y %}
-                <h4 class="bg-light border-top border-bottom py-3" id="Y">Y</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="Y">Y</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_Y %}
                     <li>
@@ -503,7 +503,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %} {% if colleges_Z %}
-                <h4 class="bg-light border-top border-bottom py-3" id="Z">Z</h4>
+                <h4 class="bg-light border-top border-bottom py-3 sticky-top" id="Z">Z</h4>
                 <ul class="m-3 list-unstyled">
                     {% for college in colleges_Z %}
                     <li>
@@ -517,7 +517,7 @@
                     {% endfor %}
                 </ul>
                 {% endif %}
-            </span>
+            </div>
         </div>
     </div>
 </div>
