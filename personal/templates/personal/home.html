@@ -1,5 +1,5 @@
 {% extends "personal/header.html" %} {% load static %} {% block content %} {% include 'personal/includes/disclaimer.html'%}
-
+<br>
 <!-- <p>Hey! Welcome to my website! Well, I wasn't expecting guests. Um, my name is Jabir. I am a programmer.</p> -->
 <div class="container-fluid" id="maincontent">
     <div class="row mb-1" id="row1">
@@ -43,7 +43,7 @@
                     <h5 class="card-title">Acts and Rules</h5>
                     <p class="card-text">College Provincialisation Acts and Rules, Assam College Management Rules, Assam Services Acts and Rules,
                         ROP Rules, Acts and Statues of the Universities of North Eastern Region, RTI/RTE Acts, etc.</p>
-                    <a href="#" class="btn btn-outline-dark">Read more</a>
+                    <a href="{% url 'act-rules' %}" class="btn btn-outline-dark">Read more</a>
                 </div>
                 <img class="card-img-bottom img-fluid" src="{% static 'personal/img/actrules.jpg' %}" alt="actrules">
             </div>

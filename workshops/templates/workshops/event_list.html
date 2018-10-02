@@ -1,13 +1,21 @@
 {% extends "personal/header.html" %} {% block content %} {% load humanize %}
 {% include 'personal/includes/disclaimer.html' %}
-
+<div class="jumbotron jumbotron-fluid bg-dark text-white" style="margin-left:-15px;margin-right:-15px;">
+    <div class="container text-center">
+        <h1 class="display-4">Seminars and Workshops</h1>
+        <p class="lead">Information pertaining to Seminars and Workshops organised by the Universities and Colleges of North-eastern
+            region.</p>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
             <form action="" method="get">{% csrf_token %}
-                <div class="btn-toolbar btn-group-toggle float-right mb-1" role="toolbar" aria-label="Basic example" data-toggle="buttons">
+                <div class="btn-toolbar btn-group-toggle float-right mb-1" role="toolbar" aria-label="Basic example"
+                    data-toggle="buttons">
                     <label class="btn btn-outline-primary m-1 active">
-                        <input type="radio" class="myRadioClass" name="options" id="option1" value="AE" autocomplete="off" checked>All Events
+                        <input type="radio" class="myRadioClass" name="options" id="option1" value="AE" autocomplete="off"
+                            checked>All Events
                     </label>
                     <label class="btn btn-outline-primary m-1">
                         <input type="radio" class="myRadioClass" name="options" id="option2" value="WS" autocomplete="off">Workshops
@@ -21,7 +29,7 @@
     </div>
 </div>
 
-<div class="container-fluid"  id="maincontent">
+<div class="container-fluid" id="maincontent">
     <div class="list-group">
         {% for event in event_list %}
         <a href="/workshops/{{ event.id }}" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -32,7 +40,8 @@
             <p class="mb-1 text-info">{{ event.event_details }}</p>
             <p class="mb-1 ">Organised by: {{ event.organiser_dept }}, {{ event.organiser_college }}.</p>
             <p class="mb-1 text-danger">Date: {{ event.startdate|date:"jS F, Y" }} - {{ event.enddate|date:"dS F, Y" }}</p>
-            <small>Venue: {{ event.organiser_college }}, {{ event.organiser_district}} {{ event.organiser_state }}: {{ event.organiser_pincode}}</small>
+            <small>Venue: {{ event.organiser_college }}, {{ event.organiser_district}} {{ event.organiser_state }}: {{
+                event.organiser_pincode}}</small>
         </a>
         {% endfor %}
     </div>
@@ -45,10 +54,10 @@
         option = $(this).val();
         $.ajax({
             data: {
-                'option' : option
+                'option': option
             },
             method: 'get',
-            success: function(data,status){
+            success: function (data, status) {
                 $("div.list-group").hide().html(
                     jQuery(data).find("div.list-group").html()
                 ).fadeIn("slow");

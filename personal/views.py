@@ -12,6 +12,10 @@ from .models import College
 #     def colleges(self):
 #         return College.objects.all().order_by('name')
 
+def actrules(request):
+    response = render(request, 'personal/actrules.html')
+    return response
+
 def colleges(request):
     
     college_list_A = College.objects.filter(name__startswith='A').order_by('name')
