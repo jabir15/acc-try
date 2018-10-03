@@ -11,5 +11,6 @@ urlpatterns = [
     path('search/', views.search_colleges, name='search-colleges'),
     path('listofcolleges/', views.colleges, name='list-of-colleges'),
     path('actrules/', views.actrules, name='act-rules'),
+    path('updates/', views.updates, name='updates'),
     path('',views.index, name='index'),
 ]

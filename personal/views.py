@@ -16,6 +16,10 @@ def actrules(request):
     response = render(request, 'personal/actrules.html')
     return response
 
+def updates(request):
+    response = render(request, 'personal/updates.html')
+    return response
+
 def colleges(request):
     
     college_list_A = College.objects.filter(name__startswith='A').order_by('name')
