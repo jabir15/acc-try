@@ -48,6 +48,12 @@
 			background-size: cover;
 			opacity: .6;
 		}
+		div[aria-expanded=true] .fa-plus {
+			display: none;
+		}
+		div[aria-expanded=false] .fa-minus {
+			display: none;
+		}
 
 		@media only screen and (max-width: 640px) {
 			#abcdes {
@@ -82,16 +88,8 @@
 				<li class="nav-item {% if 'events' in request.path %}active{% endif %}">
 					<a class="nav-link" href="{% url 'event-list' %}">Events</a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
-						Updates
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">DHE</a>
-						<a class="dropdown-item" href="#">UGC</a>
-						<a class="dropdown-item" href="#">Others</a>
-					</div>
+				<li class="nav-item {% if 'updates' in request.path %}active{% endif %}">
+					<a class="nav-link" href="{% url 'updates' %}">Updates</a>
 				</li>
 				<li class="nav-item {% if 'about' in request.path %}active{% endif %}">
 					<a class="nav-link" href="{% url 'about' %}">About Us</a>
@@ -133,7 +131,8 @@
 			$.cookie('agreeDisclaimer', 'yes', { expires: date, path: '/' });
 			$("#maincontent").css('filter', 'blur(0px)');
 		});	
-	</script> {% block individualscript %}{% endblock %}
+	</script>
+	{% block individualscript %}{% endblock %}
 
 </body>
 
