@@ -40,8 +40,7 @@
             <p class="mb-1 text-info">{{ event.event_details }}</p>
             <p class="mb-1 ">Organised by: {{ event.organiser_dept }}, {{ event.organiser_college }}.</p>
             <p class="mb-1 text-danger">Date: {{ event.startdate|date:"jS F, Y" }} - {{ event.enddate|date:"dS F, Y" }}</p>
-            <small>Venue: {{ event.organiser_college }}, {{ event.organiser_district}} {{ event.organiser_state }}: {{
-                event.organiser_pincode}}</small>
+            <small>Venue: {{ event.organiser_college }}, {{ event.organiser_district}} {{ event.organiser_state }}: {{event.organiser_pincode}} </small>
         </a>
         {% endfor %}
     </div>
