@@ -17,9 +17,9 @@ def actrules(request):
     return response
 
 def updates(request):
-    update_DHE = Update.objects.filter(update_type='DHE')
-    update_UGC = Update.objects.filter(update_type='UGC')
-    update_Others = Update.objects.filter(update_type='OTH')
+    update_DHE = Update.objects.filter(update_type='DHE').order_by('-created_at')
+    update_UGC = Update.objects.filter(update_type='UGC').order_by('-created_at')
+    update_Others = Update.objects.filter(update_type='OTH').order_by('-created_at')
     list_of_updates = {
         'update_DHE':update_DHE,
         'update_UGC':update_UGC,
