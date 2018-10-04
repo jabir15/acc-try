@@ -3,7 +3,7 @@ from django.core.mail import BadHeaderError, EmailMessage
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import ContactForm
-from .models import College
+from .models import College, Update
 # Create your views here.
 
 
@@ -17,7 +17,15 @@ def actrules(request):
     return response
 
 def updates(request):
-    response = render(request, 'personal/updates.html')
+    update_DHE = Update.objects.filter(update_type='DHE')
+    update_UGC = Update.objects.filter(update_type='UGC')
+    update_Others = Update.objects.filter(update_type='OTH')
+    list_of_updates = {
+        'update_DHE':update_DHE,
+        'update_UGC':update_UGC,
+        'update_Others':update_Others
+    }
+    response = render(request, 'personal/updates.html',list_of_updates)
     return response
 
 def colleges(request):
