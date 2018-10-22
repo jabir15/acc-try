@@ -139,10 +139,13 @@ def contact(request):
             email = EmailMessage(subject, message, sender,recipients,reply_to=[sender,])
             try:
                 email.send()
+                messages.success(
+                    request, "Thank you! We will get back with you soon."
+                )
             except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            messages.success(
-                request, "Thank you! We will get back with you soon.")
+                messages.error(
+                    request, "The email server is busy, please try again later."
+                )
             return redirect('contact')
 
     return render(request, 'personal/contact.html', {'form': form, })
