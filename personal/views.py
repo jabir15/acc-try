@@ -1,4 +1,5 @@
 from django.contrib import messages
+from smtplib import SMTPException
 from django.core.mail import BadHeaderError, EmailMessage
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -138,14 +139,13 @@ def contact(request):
                 recipients.append(sender)
             email = EmailMessage(subject, message, sender,recipients,reply_to=[sender,])
             try:
-                email.send()
+                email.send(fail_silently=False)
                 messages.success(
                     request, "Thank you! We will get back with you soon."
                 )
-            except BadHeaderError:
+                return redirect('contact')
+            except (BadHeaderError, SMTPException):
                 messages.error(
                     request, "The email server is busy, please try again later."
                 )
-            return redirect('contact')
-
     return render(request, 'personal/contact.html', {'form': form, })
