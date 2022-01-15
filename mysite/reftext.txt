@@ -1,0 +1,50 @@
+J. –P. Kruth, M. C. Leu, and T. Nakagawa, “Progress in additive manufacturing and rapid prototyping,” CIRP Annals Manuf. Technol., vol. 47, no. 2, pp. 525–540, 1998.
+A. Vafadar, F. Guzzomi, A. Rassau, and K. Hayward, “Advances in metal additive manufacturing: a review of common processes, industrial applications, and current challenges,” Appl. Sci., vol. 11, no. 3, pp. 1213–1–31, Jan. 2021.
+R. Sorrentino and O. A. Peverini, "Additive manufacturing: a key enabling technology for next-generation microwave and millimeter-wave systems," Proc. IEEE, vol. 104, no. 7, pp. 1362–1366, July 2016.
+J. M. Jafferson, H. Vinu, K. Sekaran, “A study of additive manufacturing technologies and metallizing techniques for microwave waveguide components,” Materials Today: Proceedings, vol. 46, no. 2, pp. 1328–1334, Mar. 2021.
+F. Calignano, D. Manfredi, E. P. Ambrosio, S. Biamino, M. Lombardi, E. Atzeni, A. Salmi, P. Minetola, L. Iuliano, and P. Fino, "Overview on additive manufacturing technologies," Proc. IEEE, vol. 105, no. 4, pp. 593–612, Apr. 2017.
+C. Tomassoni, O. A. Peverini, G. Venanzoni, G. Addamo, F. Paonessa, and G. Virone, "3D Printing of Microwave and Millimeter-Wave Filters: Additive Manufacturing Technologies Applied in the Development of High-Performance Filters with Novel Topologies," IEEE Microw. Mag., vol. 21, no. 6, pp. 24–45, June 2020.
+J. A. Lorente, M. M. Mendoza, A. Z. Petersson, L. Pambaguian, A. A. Melcon, and C. Ernst, "Single part microwave filters made from selective laser melting", in Proc. 39th Eur. Microw. Conf. (EuMC), Rome, Italy, Oct. 2009, pp. 1421–1424.
+B. Zhang and H. Zirath, “3D printed iris bandpass filters for millimeter-wave applications,” Electron. Lett., vol. 51, no. 22, pp. 1791–1793, Oct. 2015.
+O. A. Peverini, G. Addamo, R. Tascone, G. Virone, P. Cecchini, R. Mizzoni, F. Calignano, E. P. Ambrosio, D. Manfredi, and P. Fino, “Enhanced topology of E-plane resonators for high-power satellite applications,” IEEE Trans. Microw. Theory Techn., vol. 63, no. 10, pp. 3361–3373, Oct. 2015.
+V. Tornielli di Crestvolant, P. Martin-Iglesias, and M. J. Lancaster, "Advanced butler matrices with integrated bandpass filter functions," IEEE Trans. Microw. Theory Techn., vol. 63, no. 10, pp. 3433–3444, Oct. 2015.
+P. Booth, J. Gilmore, E. V. Lluch, and M. Harvey, "Enhancements to satellite feed chain performance testing and lead-times using additive manufacturing", in Proc. 10th Eur. Conf. Antennas Propag., Davos, Switzerland, pp. 1–5, Apr. 2016.
+P. Booth and E. Valles-Lluch, "Enhancing the performance of waveguide filters using Additive Manufacturing," Proc. IEEE, vol. 105, no. 4, pp. 613–619, Apr. 2017.
+O. A. Peverini, M. Lumia, G. Addamo, F. Paonessa, G. Virone, R. Tascone, F. Calignano, G. Cattano, and D. Manfredi, "Integration of an H-plane bend, a twist, and a filter in Ku/K-band through additive manufacturing," IEEE Trans. Microw. Theory Techn. vol. 66, no. 5, pp. 2210–2219, May 2018.
+P. Martin-Iglesias and B. Bonvoisin, "The potential of Additive Manufacturing for RF/microwave hardware: ESA perspective", Microwave Technology and Techniques Workshop, Noordwijk, Netherlands, Apr. 2017.
+O. A. Peverini, G. Addamo, M. Lumia, G. Virone, F. Calignano, M. Lorusso, D. Manfredi, “Additive manufacturing of Ku/K-band waveguide filters: a comparative analysis among selective-laser melting and stereolithography,” IET Microw. Antennas Propag., vol. 11, no. 14, pp. 1936–1942, Nov. 2017.
+O. A. Peverini, M. Lumia, F. Calignano, G. Addamo, M. Lorusso, E. P. Ambrosio, D. Manfredi, and G. Virone, "Selective laser melting manufacturing of microwave waveguide devices," Proc. IEEE, vol. 105, no. 4, pp. 620–631, Apr. 2017.
+F. Calignano, D. Manfredi, E. P. Ambrosio, L. Iuliano, and P. Fino, “Influence of process parameters on surface roughness of aluminum parts produced by DMLS,” Int. J. Adv. Manuf. Technol., vol. 67, no. 9–12, pp. 2743–2751, Aug. 2013.
+R. G. Edwards, C. M. Norton, J. E. Campbell, and D. Schurig, “Effective conductivity of additive-manufactured metals for microwave feed components,” IEEE Access, vol. 9, pp. 59979–59986, Apr. 2021.
+F. Calignano, “Design optimization of supports for overhanging structures in aluminum and titanium alloys by selective laser melting,” Mater. Des., vol. 64, pp. 203–213, Dec. 2014.
+P. Das, R. Chandran, R. Samant, and S. Anand, “Optimum part build orientation in additive manufacturing for minimizing part errors and support structures,” Procedia Manuf., vol. 1, pp. 343–354, 2015.
+R. V. Snyder, G. Macchiarella, S. Bastioli, and C. Tomassoni, “Emerging trends in techniques and technology as applied to filter design,” IEEE J. Microwaves, vol. 1, no. 1, pp. 317–344, Jan. 2021.
+P. Booth and E. Valles-Lluch, "Realising advanced waveguide bandpass filters using additive manufacturing," IET Microw. Antennas Propag., vol. 11, no. 14, pp. 1943–1948, Dec. 2017.
+P. Booth, "Additive Manufactured Bandpass Filters at Ka-band," 2019 IEEE MTT-S International Microwave Workshop Series on Advanced Materials and Processes for RF and THz Applications (IMWS-AMP), Bochum, Germany, July 2019, pp. 7–9.
+S. W. Sattler, F. Gentili, R. Teschl, and W. Bösch, "Direct metal printed 4th order stepped impedance filter in the C/X band", IEEE MTT-S Int. Microw. Symp. Dig., Philadelphia, PA, pp. 145–148, June 2018.
+F. Calignano, M. Lorusso, J. Pakkanen, F. Trevisan, E. P. Ambrosio, D. Manfredi, P. Fino, "Investigation of accuracy and dimensional limits of part produced in aluminum alloy by selective laser melting," Int. J. Adv. Manuf. Technol., vol. 88, no. 1–4, pp. 451–458, Jan. 2017.
+P. I. Richards, “Resistor-transmission-line circuits,” Proc. IRE, vol. 36, no. 2, pp. 217–220, Feb. 1948.
+H. J. Carlin, P. P. Civalleri, Wideband Circuit Design. Boca Raton, FL, USA: CRC Press, 1998.
+H. Baher, Synthesis of Electrical Networks. New York, NY, USA: John Wiley & Sons, 1984.
+I. Hunter, Theory and Design of Microwave Filters. London, U.K.: IEE Press, 2001.
+R. Levy, I. Whiteley, “Synthesis of distributed elliptic-function filters from lumped-constant prototypes,” IEEE Trans. Microw. Theory Techn., vol. 14, no. 11, pp. 506–517, Nov. 1966.
+H. Ozaki and J. Ishii, “Synthesis of a class of strip-line filters,” IRE Trans. Circuit Theory, vol. 5, no. 2, pp. 104–109, June 1958.
+R. J. Wenzel, “Exact design of TEM microwave networks using quarter-wave lines,” IEEE Trans. Microw. Theory Techn., vol. 12, no. 1, pp. 94–111, Jan. 1964.
+M. C. Horton and R. J. Wenzel, “General theory and design of optimum quarter-wave TEM filters,” IEEE Trans. Microw. Theory Techn., vol. 13, no. 5, pp. 316–327, May 1965.
+B. J. Minnis, Designing Microwave Circuits by Exact Synthesis. Norwood, MA, USA: Artech House, 1996.
+R. J. Cameron, C. M. Kudsia, and R. R. Mansour, Microwave Filters for Communication Systems: Fundamentals, Design, and Applications. Hoboken, NJ, USA: Wiley, 2007.
+R. Levy, “Tables of element values for the distributed low-pass prototype filter,” IEEE Trans. Microw. Theory Techn., vol. 13, no. 5, pp. 514–536, Sep. 1965.
+A. Papoulis, The Fourier Integral and its Applications (Electronic Science Series). New York, NY, USA: McGraw-Hill, 1962.
+A. V. Oppenheim and R. W. Schafer, Discrete-Time Signal Processing, 3rd ed. New York, NY, USA: Pearson, 2013.
+A. V. Oppenheim, A. S. Willsky, and S. H. Nawab, Signals & Systems, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 1997.
+D. M. Pozar, Microwave Engineering, 3rd ed. New York, NY, USA: John Wiley & Sons, 2005.
+I. Arnedo, M. A. G. Laso, F. Falcone, D. Benito and T. Lopetegi, “A series solution for the single-mode synthesis problem based on the coupled-mode theory,” IEEE Trans. Microw. Theory Techn., vol. 56, no. 2, pp. 457–466, Feb. 2008.
+I. Arnedo, I. Arregui, A. Lujambio, M. Chudzik, M. A. G. Laso, and T. Lopetegi, “Synthesis of microwave filters by inverse scattering using a closed-form expression valid for rational frequency responses,” IEEE Trans. Microw. Theory Techn., vol. 60, no. 5, pp. 1244–1257, May 2012.
+I. Arnedo, M. Chudzik, J. M. Percaz, I. Arregui, F. Teberio, D. Benito, T. Lopetegi, and M. A. G. Laso, “Synthesis of one dimensional electromagnetic bandgap structures with fully controlled parameters,” IEEE Trans. Microw. Theory Techn., vol. 65, no. 9, pp. 3123–3134, Sept. 2017.
+A. Rosenthal and M. Horowitz, “Inverse scattering algorithm for reconstructing strongly reflecting fiber Bragg gratings,” IEEE J. Quantum Electron., vol. 39, no. 8, pp. 1018–1026, Aug. 2003.
+B. Z. Katsenelenbaum, L. Mercader, M. Pereyaslavets, M. Sorolla, and M. Thumm, Theory of Nonuniform Waveguides – The Cross-Section Method, London, UK: IEE Electromagnetic Waves Series, 44, 1998.
+G. H. Song and S. Y. Shin, “Design of corrugated waveguide filters by the Gel’fand-Levitan-Marchenko inverse-scattering method,” J. Opt. Soc. Amer. A, vol. 2, no. 11, pp. 1905–1915, Nov. 1985.
+E. Peral, J. Capmany, and J. Marti, “Iterative Solution to the Gel’Fand-Levitan-Marchenko coupled equations and application to synthesis of fiber gratings,” IEEE J. Quantum Electron., vol. 32, no. 12, pp. 2078–2084, Dec. 1996.
+J. M. Percaz, I. Arnedo, I. Arregui, F. Teberio, P. Martín-Iglesias, M. A. G. Laso, and T. Lopetegi, “General synthesis of tapered matching sections for single-mode operation using the coupled-mode theory,” IEEE Trans. Microw. Theory Techn., vol. 67, no. 9, pp. 3511–3526, Sept. 2019.
+M. Salek, X. Shang, R. C. Roberts, M. J. Lancaster, F. Boettcher, D. Weber, and T. Starke, “W-Band waveguide bandpass filters fabricated by micro laser sintering,” IEEE Trans. Circuits Syst., II, Exp. Briefs, vol. 66, no. 1, pp. 61–65, Jan. 2019.
+
